@@ -1,2 +1,54 @@
 ﻿
 
+@page "/Notes"
+@using NotesCRUD.Data
+@inject NotesService notesService
+
+<NavLink class="nav-link" href="AddNotes">
+    <span class="oi oi-plus" aria-hidden="true">Add New</span>
+
+</NavLink>
+
+<h1>Notes Info</h1>
+@if (NotesObject is null)
+{
+    <p><em>Loading... !</em></p>
+}
+else
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Notes Id</th>
+                <th>Notes Title</th>
+                <th>Content</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var note in NotesObject)
+            {
+                <tr>
+                    <td>@note.Id</td>
+                    <td>@note.Title</td>
+                    <td>@note.Content</td>
+                    <td>
+                        <a class="nav-link" href="EditNotes/@note.Id">
+                            <span class="oi oi-pencil" aria-hidden="true">Edit</span>
+                        </a>
+                        <a class="nav-link" href="DeleteNotes/@note.Id">
+                            <span class="oi oi-trash" aria-hidden="true">Delete</span>
+                        </a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+@code{
+    List<Notes> NotesObject;
+    protected override async Task OnInitializedAsync()
+    {
+        NotesObject = await Task.Run(() => notesService.GetAllNotesAsync());
+    }
+
+}
