@@ -83,14 +83,14 @@ using NotesCRUD.Shared;
 #line hidden
 #nullable disable
 #nullable restore
-#line 4 "C:\Users\opana\source\repos\NotesCRUD\NotesCRUD\Pages\Notes.razor"
+#line 2 "C:\Users\opana\source\repos\NotesCRUD\NotesCRUD\Pages\EditNotes.razor"
 using NotesCRUD.Data;
 
 #line default
 #line hidden
 #nullable disable
-    [Microsoft.AspNetCore.Components.RouteAttribute("/Notes")]
-    public partial class Notes : Microsoft.AspNetCore.Components.ComponentBase
+    [Microsoft.AspNetCore.Components.RouteAttribute("/EditNotes/{Id}")]
+    public partial class EditNotes : Microsoft.AspNetCore.Components.ComponentBase
     {
         #pragma warning disable 1998
         protected override void BuildRenderTree(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder __builder)
@@ -98,18 +98,29 @@ using NotesCRUD.Data;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 47 "C:\Users\opana\source\repos\NotesCRUD\NotesCRUD\Pages\Notes.razor"
-      
-    List<NotesCRUD.Data.Notes> NotesObject;
+#line 6 "C:\Users\opana\source\repos\NotesCRUD\NotesCRUD\Pages\EditNotes.razor"
+       
+    [Parameter]
+    public string Id { get; set; }
+    NotesCRUD.Data.Notes obj = new NotesCRUD.Data.Notes();
     protected override async Task OnInitializedAsync()
     {
-        NotesObject = await Task.Run(() => notesService.GetAllNotesAsync());
+        obj = await Task.Run(() => notesService.GetNotesAsync(Convert.ToInt32(Id)));
     }
-
+    protected async void UpdateNotes()
+    {
+        await notesService.UpdateNotesAsync(obj);
+        NavigationManager.NavigateTo("Notes");
+    }
+    void Cancel()
+    {
+        NavigationManager.NavigateTo("Notes");
+    }
 
 #line default
 #line hidden
 #nullable disable
+        [global::Microsoft.AspNetCore.Components.InjectAttribute] private NavigationManager NavigationManager { get; set; }
         [global::Microsoft.AspNetCore.Components.InjectAttribute] private NotesService notesService { get; set; }
     }
 }

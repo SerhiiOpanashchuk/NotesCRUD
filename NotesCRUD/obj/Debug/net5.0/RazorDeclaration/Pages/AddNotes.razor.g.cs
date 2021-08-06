@@ -83,14 +83,14 @@ using NotesCRUD.Shared;
 #line hidden
 #nullable disable
 #nullable restore
-#line 4 "C:\Users\opana\source\repos\NotesCRUD\NotesCRUD\Pages\Notes.razor"
+#line 2 "C:\Users\opana\source\repos\NotesCRUD\NotesCRUD\Pages\AddNotes.razor"
 using NotesCRUD.Data;
 
 #line default
 #line hidden
 #nullable disable
-    [Microsoft.AspNetCore.Components.RouteAttribute("/Notes")]
-    public partial class Notes : Microsoft.AspNetCore.Components.ComponentBase
+    [Microsoft.AspNetCore.Components.RouteAttribute("/AddNotes")]
+    public partial class AddNotes : Microsoft.AspNetCore.Components.ComponentBase
     {
         #pragma warning disable 1998
         protected override void BuildRenderTree(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder __builder)
@@ -98,18 +98,23 @@ using NotesCRUD.Data;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 47 "C:\Users\opana\source\repos\NotesCRUD\NotesCRUD\Pages\Notes.razor"
-      
-    List<NotesCRUD.Data.Notes> NotesObject;
-    protected override async Task OnInitializedAsync()
+#line 36 "C:\Users\opana\source\repos\NotesCRUD\NotesCRUD\Pages\AddNotes.razor"
+       
+    NotesCRUD.Data.Notes obj = new NotesCRUD.Data.Notes();
+    protected async void CreateNote()
     {
-        NotesObject = await Task.Run(() => notesService.GetAllNotesAsync());
+        await notesService.InsertNotesAsync(obj);
+        NavigationManager.NavigateTo("Notes");
     }
-
+    void Cancel()
+    {
+        NavigationManager.NavigateTo("Notes");
+    }
 
 #line default
 #line hidden
 #nullable disable
+        [global::Microsoft.AspNetCore.Components.InjectAttribute] private NavigationManager NavigationManager { get; set; }
         [global::Microsoft.AspNetCore.Components.InjectAttribute] private NotesService notesService { get; set; }
     }
 }

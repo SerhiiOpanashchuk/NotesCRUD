@@ -1,0 +1,47 @@
+﻿@page "/AddNotes"
+@using NotesCRUD.Data
+@inject NotesService notesService
+@inject NavigationManager NavigationManager
+
+<h2>Add Note</h2>
+<hr />
+
+<form>
+    <div class="row">
+        <div class="col-md-8">
+            <div class="form-group">
+                <label for="Id" class="control-label">Id</label>
+                <input form="Id" class="form-control" @bind="@obj.Id" />
+            <div class="form-group">
+                <label for="Designation" class="control-label">Title</label>
+                <input form="Designation" class="form-control" @bind="@obj.Title" />
+            </div>
+            <div class="form-group">
+                <label for="Designation" class="control-label">Content</label>
+                <input form="Designation" class="form-control" @bind="@obj.Content" />
+            </div>
+        </div>
+    </div>
+        </div>
+    <div class="row">
+        <div class="col-md-4">
+            <div class="form-group">
+                <input type="button" class="btn btn-primary" @onclick="@CreateNote" value="Save" />
+                <input type="button" class="btn btn-primary" @onclick="@Cancel" value="Cancel" />
+            </div>
+        </div>
+    </div>
+</form>
+
+@code {
+    NotesCRUD.Data.Notes obj = new NotesCRUD.Data.Notes();
+    protected async void CreateNote()
+    {
+        await notesService.InsertNotesAsync(obj);
+        NavigationManager.NavigateTo("Notes");
+    }
+    void Cancel()
+    {
+        NavigationManager.NavigateTo("Notes");
+    }
+}

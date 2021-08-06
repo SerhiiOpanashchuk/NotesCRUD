@@ -29,7 +29,6 @@ namespace NotesCRUD
         {
             services.AddRazorPages();
             services.AddServerSideBlazor();
-            services.AddSingleton<WeatherForecastService>();
             services.AddScoped<NotesService>();
 
             #region Connection String

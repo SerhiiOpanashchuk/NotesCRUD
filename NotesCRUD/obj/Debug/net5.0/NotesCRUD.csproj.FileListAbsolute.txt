@@ -19,7 +19,6 @@ C:\Users\opana\source\repos\NotesCRUD\NotesCRUD\obj\Debug\net5.0\NotesCRUD.MvcAp
 C:\Users\opana\source\repos\NotesCRUD\NotesCRUD\obj\Debug\net5.0\NotesCRUD.RazorComponent.input.cache
 C:\Users\opana\source\repos\NotesCRUD\NotesCRUD\obj\Debug\net5.0\RazorDeclaration\App.razor.g.cs
 C:\Users\opana\source\repos\NotesCRUD\NotesCRUD\obj\Debug\net5.0\RazorDeclaration\Pages\Counter.razor.g.cs
-C:\Users\opana\source\repos\NotesCRUD\NotesCRUD\obj\Debug\net5.0\RazorDeclaration\Pages\FetchData.razor.g.cs
 C:\Users\opana\source\repos\NotesCRUD\NotesCRUD\obj\Debug\net5.0\RazorDeclaration\Pages\Index.razor.g.cs
 C:\Users\opana\source\repos\NotesCRUD\NotesCRUD\obj\Debug\net5.0\RazorDeclaration\Shared\SurveyPrompt.razor.g.cs
 C:\Users\opana\source\repos\NotesCRUD\NotesCRUD\obj\Debug\net5.0\RazorDeclaration\_Imports.razor.g.cs
@@ -32,7 +31,6 @@ C:\Users\opana\source\repos\NotesCRUD\NotesCRUD\obj\Debug\net5.0\NotesCRUD.TagHe
 C:\Users\opana\source\repos\NotesCRUD\NotesCRUD\obj\Debug\net5.0\NotesCRUD.RazorCoreGenerate.cache
 C:\Users\opana\source\repos\NotesCRUD\NotesCRUD\obj\Debug\net5.0\Razor\App.razor.g.cs
 C:\Users\opana\source\repos\NotesCRUD\NotesCRUD\obj\Debug\net5.0\Razor\Pages\Counter.razor.g.cs
-C:\Users\opana\source\repos\NotesCRUD\NotesCRUD\obj\Debug\net5.0\Razor\Pages\FetchData.razor.g.cs
 C:\Users\opana\source\repos\NotesCRUD\NotesCRUD\obj\Debug\net5.0\Razor\Pages\Index.razor.g.cs
 C:\Users\opana\source\repos\NotesCRUD\NotesCRUD\obj\Debug\net5.0\Razor\Shared\SurveyPrompt.razor.g.cs
 C:\Users\opana\source\repos\NotesCRUD\NotesCRUD\obj\Debug\net5.0\Razor\_Imports.razor.g.cs
@@ -98,3 +96,9 @@ C:\Users\opana\source\repos\NotesCRUD\NotesCRUD\bin\Debug\net5.0\Humanizer.dll
 C:\Users\opana\source\repos\NotesCRUD\NotesCRUD\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.Design.dll
 C:\Users\opana\source\repos\NotesCRUD\NotesCRUD\obj\Debug\net5.0\RazorDeclaration\Pages\Notes.razor.g.cs
 C:\Users\opana\source\repos\NotesCRUD\NotesCRUD\obj\Debug\net5.0\Razor\Pages\Notes.razor.g.cs
+C:\Users\opana\source\repos\NotesCRUD\NotesCRUD\obj\Debug\net5.0\RazorDeclaration\Pages\AddNotes.razor.g.cs
+C:\Users\opana\source\repos\NotesCRUD\NotesCRUD\obj\Debug\net5.0\RazorDeclaration\Pages\Delete.razor.g.cs
+C:\Users\opana\source\repos\NotesCRUD\NotesCRUD\obj\Debug\net5.0\RazorDeclaration\Pages\EditNotes.razor.g.cs
+C:\Users\opana\source\repos\NotesCRUD\NotesCRUD\obj\Debug\net5.0\Razor\Pages\AddNotes.razor.g.cs
+C:\Users\opana\source\repos\NotesCRUD\NotesCRUD\obj\Debug\net5.0\Razor\Pages\Delete.razor.g.cs
+C:\Users\opana\source\repos\NotesCRUD\NotesCRUD\obj\Debug\net5.0\Razor\Pages\EditNotes.razor.g.cs

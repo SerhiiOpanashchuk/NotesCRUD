@@ -45,7 +45,7 @@ else
     </table>
 }
 @code{
-    List<Notes> NotesObject;
+    List<NotesCRUD.Data.Notes> NotesObject;
     protected override async Task OnInitializedAsync()
     {
         NotesObject = await Task.Run(() => notesService.GetAllNotesAsync());

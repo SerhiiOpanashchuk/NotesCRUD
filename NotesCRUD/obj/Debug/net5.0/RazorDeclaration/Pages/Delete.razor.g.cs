@@ -83,14 +83,14 @@ using NotesCRUD.Shared;
 #line hidden
 #nullable disable
 #nullable restore
-#line 3 "C:\Users\opana\source\repos\NotesCRUD\NotesCRUD\Pages\FetchData.razor"
+#line 2 "C:\Users\opana\source\repos\NotesCRUD\NotesCRUD\Pages\Delete.razor"
 using NotesCRUD.Data;
 
 #line default
 #line hidden
 #nullable disable
-    [Microsoft.AspNetCore.Components.RouteAttribute("/fetchdata")]
-    public partial class FetchData : Microsoft.AspNetCore.Components.ComponentBase
+    [Microsoft.AspNetCore.Components.RouteAttribute("/Delete/{Id}")]
+    public partial class Delete : Microsoft.AspNetCore.Components.ComponentBase
     {
         #pragma warning disable 1998
         protected override void BuildRenderTree(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder __builder)
@@ -98,19 +98,30 @@ using NotesCRUD.Data;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 39 "C:\Users\opana\source\repos\NotesCRUD\NotesCRUD\Pages\FetchData.razor"
+#line 6 "C:\Users\opana\source\repos\NotesCRUD\NotesCRUD\Pages\Delete.razor"
        
-    private WeatherForecast[] forecasts;
-
+    [Parameter]
+    public string Id { get; set; }
+    NotesCRUD.Data.Notes obj = new NotesCRUD.Data.Notes();
     protected override async Task OnInitializedAsync()
     {
-        forecasts = await ForecastService.GetForecastAsync(DateTime.Now);
+        obj = await Task.Run(() => notesService.GetNotesAsync(Convert.ToInt32(Id)));
+    }
+    protected async void DeleteNote()
+    {
+        await notesService.DeleteNotesAsync(obj);
+        NavigationManager.NavigateTo("Notes");
+    }
+    void Cancel()
+    {
+        NavigationManager.NavigateTo("Notes");
     }
 
 #line default
 #line hidden
 #nullable disable
-        [global::Microsoft.AspNetCore.Components.InjectAttribute] private WeatherForecastService ForecastService { get; set; }
+        [global::Microsoft.AspNetCore.Components.InjectAttribute] private NavigationManager NavigationManager { get; set; }
+        [global::Microsoft.AspNetCore.Components.InjectAttribute] private NotesService notesService { get; set; }
     }
 }
 #pragma warning restore 1591

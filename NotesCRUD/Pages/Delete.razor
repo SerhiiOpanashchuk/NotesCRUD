@@ -1,0 +1,54 @@
+﻿@page "/Delete/{Id}"
+@using NotesCRUD.Data
+@inject NotesService notesService
+@inject NavigationManager NavigationManager
+
+@code {
+    [Parameter]
+    public string Id { get; set; }
+    NotesCRUD.Data.Notes obj = new NotesCRUD.Data.Notes();
+    protected override async Task OnInitializedAsync()
+    {
+        obj = await Task.Run(() => notesService.GetNotesAsync(Convert.ToInt32(Id)));
+    }
+    protected async void DeleteNote()
+    {
+        await notesService.DeleteNotesAsync(obj);
+        NavigationManager.NavigateTo("Notes");
+    }
+    void Cancel()
+    {
+        NavigationManager.NavigateTo("Notes");
+    }
+}
+
+<h2>Delete Notes</h2>
+<hr />
+<h3>Are you sure want to delete this?</h3>
+<form>
+    <div class="row">
+        <div class=" col-md-8">
+            <div class="form-group">
+                <label>Note Id:</label>
+                <label>@obj.Id</label>
+            </div>
+            <div class="form-group">
+                <label>Employee Name:</label>
+                <label>@obj.Title</label>
+            </div>
+            <div class="form-group">
+                <label>Desigation:</label>
+                <label>@obj.Content</label>
+            </div>
+        </div>
+
+    </div>
+    <div class="row">
+        <div class="col-md-4">
+            <div class="form-group">
+                <input type="button" class="btn btn-danger" @onclick="@DeleteNote" value="Delete" />
+                <input type="button" class="btn btn-primary" @onclick="@Cancel" value="Cancel" />
+            </div>
+        </div>
+    </div>
+</form>
