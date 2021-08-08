@@ -56,7 +56,6 @@ C:\Users\opana\source\repos\NotesCRUD\NotesCRUD\obj\Debug\net5.0\NotesCRUD.genru
 C:\Users\opana\source\repos\NotesCRUD\NotesCRUD\obj\Debug\net5.0\NotesCRUD.csproj.CopyComplete
 C:\Users\opana\source\repos\NotesCRUD\NotesCRUD\bin\Debug\net5.0\Azure.Core.dll
 C:\Users\opana\source\repos\NotesCRUD\NotesCRUD\bin\Debug\net5.0\Azure.Identity.dll
-C:\Users\opana\source\repos\NotesCRUD\NotesCRUD\bin\Debug\net5.0\EntityFramework.SqlServer.dll
 C:\Users\opana\source\repos\NotesCRUD\NotesCRUD\bin\Debug\net5.0\EntityFramework.dll
 C:\Users\opana\source\repos\NotesCRUD\NotesCRUD\bin\Debug\net5.0\Microsoft.Bcl.AsyncInterfaces.dll
 C:\Users\opana\source\repos\NotesCRUD\NotesCRUD\bin\Debug\net5.0\Microsoft.Data.SqlClient.dll
@@ -72,7 +71,6 @@ C:\Users\opana\source\repos\NotesCRUD\NotesCRUD\bin\Debug\net5.0\Microsoft.Ident
 C:\Users\opana\source\repos\NotesCRUD\NotesCRUD\bin\Debug\net5.0\Microsoft.IdentityModel.Protocols.dll
 C:\Users\opana\source\repos\NotesCRUD\NotesCRUD\bin\Debug\net5.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
 C:\Users\opana\source\repos\NotesCRUD\NotesCRUD\bin\Debug\net5.0\Microsoft.IdentityModel.Tokens.dll
-C:\Users\opana\source\repos\NotesCRUD\NotesCRUD\bin\Debug\net5.0\System.CodeDom.dll
 C:\Users\opana\source\repos\NotesCRUD\NotesCRUD\bin\Debug\net5.0\System.Configuration.ConfigurationManager.dll
 C:\Users\opana\source\repos\NotesCRUD\NotesCRUD\bin\Debug\net5.0\System.Data.SqlClient.dll
 C:\Users\opana\source\repos\NotesCRUD\NotesCRUD\bin\Debug\net5.0\System.Diagnostics.DiagnosticSource.dll
