@@ -32,7 +32,7 @@ namespace NotesCRUD
             services.AddScoped<NotesService>();
 
             #region Connection String
-            services.AddDbContext<AppDBContext>(item => item.UseSqlServer(Configuration.GetConnectionString("@SQLEXPRESS;Initial Catalog=Notes;Integrated Security=True")));
+            services.AddDbContext<AppDBContext>(item => item.UseSqlServer(Configuration.GetConnectionString("Server=localhost;Port=5432;Database=NOTES2;User id=postgres;Password=1111;")));
             #endregion
 
 
